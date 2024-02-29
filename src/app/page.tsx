@@ -5,6 +5,7 @@ import Link from "next/link";
 import Navbar from "./components/Navbar";
 
 export default function LandingPage() {
+  // eslint-disable-next-line react-hooks/exhaustive-deps
   const textPhrases = ["networking.", "sales.", "recruiting."];
 
   const [currentTextPhrase, setCurrentTextPhrase] = useState("");
@@ -84,7 +85,7 @@ export default function LandingPage() {
             <Link href={"/form"}>
               <button
                 type="button"
-                className="box-shadow flex h-12 items-center justify-center rounded-lg border border-black bg-white px-4 font-medium text-black hover:bg-gray-200"
+                className="box-shadow flex h-12 items-center justify-center rounded-lg border border-black bg-white px-4 font-medium text-black hover:bg-gray-100"
               >
                 Try demo 🌵
               </button>
