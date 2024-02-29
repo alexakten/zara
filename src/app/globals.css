@@ -8,6 +8,74 @@
   --background-end-rgb: 255, 255, 255;
 }
 
+::selection {
+  background-color: #111; /* Background color of the text selection */
+  color: white; /* Text color when selected */
+}
+
+/* globals.css */
+@font-face {
+  font-family: 'Satoshi';
+  src: url('/Satoshi-Variable.ttf') format('truetype-variations');
+  font-weight: 100 900; /* Adjust the range as per the font's capability */
+  font-style: normal; /* Or just 'normal' if it doesn't include italic */
+}
+
+.typing-cursor {
+  display: inline-block;
+  content: '|';
+  font-size: 1em; /* Adjust the size as needed */
+  color: black;
+  margin-left: 2px;
+  animation: blink 0.7s steps(1) infinite;
+}
+
+@keyframes blink {
+  50% { opacity: 0; }
+}
+
+.black-shadow {
+  color: white;
+  position: relative;
+  z-index: 2;
+  text-shadow:
+    -1.5px -1.5px 0 #111,  /* top left */
+     1.5px -1.5px 0 #111,  /* top right */
+    -1.5px  1.5px 0 #111,  /* bottom left */
+     1.5px  1.5px 0 #111,  /* bottom right */
+     0px  4px #111;
+}
+
+.gray-shadow {
+  position: relative;
+  z-index: 2;
+  text-shadow:
+     0px  4px #ddd;
+}
+
+.box-shadow {
+  box-shadow:
+  0px  4px #111;
+}
+
+/* Media query for screens smaller than 400px */
+@media (max-width: 400px) {
+  .black-shadow {
+    text-shadow:
+    -1px -1px 0 #111,  /* top left */
+    1px -1px 0 #111,  /* top right */
+   -1px  1px 0 #111,  /* bottom left */
+    1px  1px 0 #111,  /* bottom right */
+    0px  4px #111;
+  }
+
+  .gray-shadow {
+    text-shadow:
+       0px  2px #ddd;
+  }
+}
+
+
 @media (prefers-color-scheme: dark) {
   :root {
     --foreground-rgb: 255, 255, 255;
@@ -17,6 +85,7 @@
 }
 
 body {
+  font-family: 'Satoshi', sans-serif;
   color: rgb(var(--foreground-rgb));
   background: linear-gradient(
       to bottom,
@@ -24,10 +93,4 @@ body {
       rgb(var(--background-end-rgb))
     )
     rgb(var(--background-start-rgb));
-}
-
-@layer utilities {
-  .text-balance {
-    text-wrap: balance;
-  }
 }
