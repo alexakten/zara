@@ -5,7 +5,7 @@ import Link from "next/link";
 import Navbar from "./components/Navbar";
 
 export default function LandingPage() {
-  const textPhrases = ["your website.", "social media.", "marketing."];
+  const textPhrases = ["networking.", "sales.", "recruiting."];
 
   const [currentTextPhrase, setCurrentTextPhrase] = useState("");
   const [isDeleting, setIsDeleting] = useState(false);
@@ -61,37 +61,36 @@ export default function LandingPage() {
       <section className="flex h-screen w-screen items-center justify-center px-4">
         <div
           className="flex  flex-col items-center gap-6 text-center text-gray-900"
-          style={{ maxWidth: 880 }}
+          style={{ maxWidth: 1050 }}
         >
           <div className="rounded-full border border-zinc-300 bg-white  px-4 py-1 text-zinc-400">
             v1.0 under construction <span className="text-[12px]">🚧</span>
           </div>
           <div>
             <h1 className="gray-shadow text-5xl font-bold tracking-tighter sm:text-8xl">
-              Video testimonials <br /> for{" "}
-              <span className="black-shadow">{currentTextPhrase}</span>
+              AI Assisted LinkedIn <br />
+              outreach for <span className="black-shadow">{currentTextPhrase}</span>
               <span className="typing-cursor">|</span>
             </h1>
           </div>
 
           <div className="text-md xs:text-xl" style={{ maxWidth: 624 }}>
             <p>
-              Introducing the simplest way to collect & publish video
-              testimonials. Start boosting your business with social proof
-              today.
+              Zara automatically writes personalized LinkedIn outreach messages,
+              exactly in your style. Write cold outbound messages 10x faster.
             </p>
           </div>
           <div className="flex flex-col items-center gap-4 xs:flex-row">
             <Link href={"/form"}>
               <button
                 type="button"
-                className="box-shadow flex h-12 items-center justify-center rounded-lg border border-black bg-white px-4 font-medium text-black hover:bg-purple hover:text-white"
+                className="box-shadow flex h-12 items-center justify-center rounded-lg border border-black bg-white px-4 font-medium text-black hover:bg-gray-200"
               >
                 Try demo 🌵
               </button>
             </Link>
           </div>
-          <p className="text-zinc-400">It&apos;s so easy! 🌵</p>
+          <p className="text-zinc-400">It&apos;s so easy!</p>
         </div>
       </section>
     </main>
