@@ -67,7 +67,7 @@ export default function LandingPage() {
             v1.0 under construction <span className="text-[12px]">🚧</span>
           </div>
           <div>
-            <h1 className="gray-shadow text-5xl font-bold tracking-tighter sm:text-8xl">
+            <h1 className="gray-shadow text-4xl leading-[1.1] font-bold tracking-tighter sm:text-7xl">
               AI Assisted LinkedIn <br />
               outreach for <span className="black-shadow">{currentTextPhrase}</span>
               <span className="typing-cursor">|</span>
