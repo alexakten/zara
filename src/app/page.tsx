@@ -54,7 +54,6 @@ export default function LandingPage() {
     return () => clearTimeout(timeoutId);
   }, [currentTextPhrase, isDeleting, textIndex, textPhrases]);
 
-
   return (
     <main className="flex flex-col items-center justify-center bg-zinc-100 px-4">
       <Navbar />
@@ -92,15 +91,9 @@ export default function LandingPage() {
               </button>
             </Link>
           </div>
-          <p className="text-zinc-400">
-            {lang === "en" ? "It's so easy! " : "Det är så enkelt! 🌵"}
-          </p>
+          <p className="text-zinc-400">It&apos;s so easy! 🌵</p>
         </div>
       </section>
-
-      {/* <section className="flex w-screen pb-40 items-center justify-center px-4">
-        <Record question="How did you hear about us?"/>
-      </section> */}
     </main>
   );
 }
