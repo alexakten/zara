@@ -83,7 +83,7 @@ export default function LandingPage() {
             </p>
           </div>
           <div className="flex flex-col items-center gap-4 xs:flex-row">
-            <Link href={"/form"}>
+            <Link href={"https://calendly.com/alexander-remedi/zara-demo"}>
               <button
                 type="button"
                 className="box-shadow flex h-12 items-center justify-center rounded-lg border border-black bg-white px-4 font-medium text-black hover:bg-gray-100"
