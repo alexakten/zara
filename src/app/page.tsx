@@ -70,7 +70,8 @@ export default function LandingPage() {
           <div>
             <h1 className="gray-shadow text-4xl leading-[1.1] font-bold tracking-tighter sm:text-7xl">
               AI Assisted LinkedIn <br />
-              outreach for <span className="black-shadow">{currentTextPhrase}</span>
+              outreach for{" "}
+              <span className="black-shadow">{currentTextPhrase}</span>
               <span className="typing-cursor">|</span>
             </h1>
           </div>
@@ -87,7 +88,7 @@ export default function LandingPage() {
                 type="button"
                 className="box-shadow flex h-12 items-center justify-center rounded-lg border border-black bg-white px-4 font-medium text-black hover:bg-gray-100"
               >
-                Try demo 🌵
+                Book demo 🌵
               </button>
             </Link>
           </div>
